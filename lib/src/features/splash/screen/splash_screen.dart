@@ -11,11 +11,19 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+
   @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
+  void initState() {
+    // TODO: implement initState
     checkDatabaseAvailability(context);
+    super.initState();
   }
+
+  // @override
+  // void didChangeDependencies() {
+  //   super.didChangeDependencies();
+  //   checkDatabaseAvailability(context);
+  // }
 
   @override
   Widget build(BuildContext context) {

@@ -1,7 +1,8 @@
 part of 'quran_theme_bloc.dart';
 
 class QuranThemeState extends Equatable {
-  final bool showTranslation;
+  final bool showUrduTranslation;
+  final bool showEnglishTranslation;
   final String translationMode;
   final bool withArabs;
   final double quranFontSize;
@@ -10,7 +11,8 @@ class QuranThemeState extends Equatable {
   final String translationFontFamily;
 
   QuranThemeState({
-    required this.showTranslation,
+    required this.showUrduTranslation,
+    required this.showEnglishTranslation,
     required this.translationMode,
     required this.withArabs,
     required this.quranFontSize,
@@ -21,7 +23,8 @@ class QuranThemeState extends Equatable {
 
   @override
   List<Object> get props => [
-        showTranslation,
+        showUrduTranslation,
+        showEnglishTranslation,
         translationMode,
         withArabs,
         quranFontSize,

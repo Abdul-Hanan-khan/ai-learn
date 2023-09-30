@@ -56,26 +56,56 @@ class ShowTranslationOption extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(vertical: 8.0.h),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      child: Column(
         children: [
-          Text(
-            'Show translation',
-            style: Theme.of(context)
-                .textTheme
-                .titleLarge!
-                .copyWith(color: Theme.of(context).primaryColor),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                'Show Urdu Translation',
+                style: Theme.of(context)
+                    .textTheme
+                    .titleLarge!
+                    .copyWith(color: Theme.of(context).primaryColor),
+              ),
+              BlocBuilder<QuranThemeBloc, QuranThemeState>(
+                builder: (context, state) {
+                  return CustomSwitch(
+                      value: state.showUrduTranslation,
+                      onChanged: (val) {
+                        BlocProvider.of<QuranThemeBloc>(context).add(
+                          ShowTranslation(val,state.showEnglishTranslation),
+                        );
+                      });
+                },
+              ),
+            ],
           ),
-          BlocBuilder<QuranThemeBloc, QuranThemeState>(
-            builder: (context, state) {
-              return CustomSwitch(
-                  value: state.showTranslation,
-                  onChanged: (val) {
-                    BlocProvider.of<QuranThemeBloc>(context).add(
-                      ShowTranslation(val),
-                    );
-                  });
-            },
+          SizedBox(height: 4.h,),
+          Divider(),
+          SizedBox(height: 4.h,),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                'Show English Translation',
+                style: Theme.of(context)
+                    .textTheme
+                    .titleLarge!
+                    .copyWith(color: Theme.of(context).primaryColor),
+              ),
+              BlocBuilder<QuranThemeBloc, QuranThemeState>(
+                builder: (context, state) {
+                  return CustomSwitch(
+                      value: state.showEnglishTranslation,
+                      onChanged: (val) {
+                        BlocProvider.of<QuranThemeBloc>(context).add(
+                          ShowTranslation(state.showUrduTranslation,val),
+                        );
+                      });
+                },
+              ),
+            ],
           ),
         ],
       ),

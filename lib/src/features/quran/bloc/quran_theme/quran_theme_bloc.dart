@@ -10,7 +10,8 @@ class QuranThemeBloc extends HydratedBloc<QuranThemeEvent, QuranThemeState> {
   QuranThemeBloc()
       : super(
           QuranThemeState(
-            showTranslation: true,
+            showUrduTranslation: true,
+              showEnglishTranslation: true,
             translationMode: 'Urdu',
             withArabs: true,
             quranFontSize: 24,
@@ -22,7 +23,8 @@ class QuranThemeBloc extends HydratedBloc<QuranThemeEvent, QuranThemeState> {
     on<QuranThemeEvent>((event, emit) async {
       if (event is ShowTranslation) {
         emit(QuranThemeState(
-          showTranslation: event.show,
+          showUrduTranslation: event.showUrdu,
+          showEnglishTranslation: event.showEnglish,
           translationMode: state.translationMode,
           withArabs: state.withArabs,
           quranFontSize: state.quranFontSize,
@@ -33,7 +35,8 @@ class QuranThemeBloc extends HydratedBloc<QuranThemeEvent, QuranThemeState> {
       }
       if (event is SwitchTranslationMode) {
         emit(QuranThemeState(
-          showTranslation: state.showTranslation,
+          showUrduTranslation: state.showUrduTranslation,
+          showEnglishTranslation: state.showEnglishTranslation,
           translationMode: event.mode,
           withArabs: state.withArabs,
           quranFontSize: state.quranFontSize,
@@ -44,7 +47,8 @@ class QuranThemeBloc extends HydratedBloc<QuranThemeEvent, QuranThemeState> {
       }
       if (event is ShowWithArab) {
         emit(QuranThemeState(
-          showTranslation: state.showTranslation,
+          showUrduTranslation: state.showUrduTranslation,
+          showEnglishTranslation: state.showEnglishTranslation,
           translationMode: state.translationMode,
           withArabs: event.show,
           quranFontSize: state.quranFontSize,
@@ -55,7 +59,8 @@ class QuranThemeBloc extends HydratedBloc<QuranThemeEvent, QuranThemeState> {
       }
       if (event is AddQuranFontSize) {
         emit(QuranThemeState(
-          showTranslation: state.showTranslation,
+          showUrduTranslation: state.showUrduTranslation,
+          showEnglishTranslation: state.showEnglishTranslation,
           translationMode: state.translationMode,
           withArabs: state.withArabs,
           quranFontSize: state.quranFontSize + 1,
@@ -66,7 +71,8 @@ class QuranThemeBloc extends HydratedBloc<QuranThemeEvent, QuranThemeState> {
       }
       if (event is ReduceQuranFontSize) {
         emit(QuranThemeState(
-          showTranslation: state.showTranslation,
+          showUrduTranslation: state.showUrduTranslation,
+          showEnglishTranslation: state.showEnglishTranslation,
           translationMode: state.translationMode,
           withArabs: state.withArabs,
           quranFontSize: state.quranFontSize - 1,
@@ -77,7 +83,8 @@ class QuranThemeBloc extends HydratedBloc<QuranThemeEvent, QuranThemeState> {
       }
       if (event is SetQuranFontFamily) {
         emit(QuranThemeState(
-          showTranslation: state.showTranslation,
+          showUrduTranslation: state.showUrduTranslation,
+          showEnglishTranslation: state.showEnglishTranslation,
           translationMode: state.translationMode,
           withArabs: state.withArabs,
           quranFontSize: state.quranFontSize,
@@ -88,7 +95,8 @@ class QuranThemeBloc extends HydratedBloc<QuranThemeEvent, QuranThemeState> {
       }
       if (event is AddTranslationFontSize) {
         emit(QuranThemeState(
-          showTranslation: state.showTranslation,
+          showUrduTranslation: state.showUrduTranslation,
+          showEnglishTranslation: state.showEnglishTranslation,
           translationMode: state.translationMode,
           withArabs: state.withArabs,
           quranFontSize: state.quranFontSize,
@@ -99,7 +107,8 @@ class QuranThemeBloc extends HydratedBloc<QuranThemeEvent, QuranThemeState> {
       }
       if (event is ReduceTranslationFontSize) {
         emit(QuranThemeState(
-          showTranslation: state.showTranslation,
+          showUrduTranslation: state.showUrduTranslation,
+          showEnglishTranslation: state.showEnglishTranslation,
           translationMode: state.translationMode,
           withArabs: state.withArabs,
           quranFontSize: state.quranFontSize,
@@ -110,7 +119,8 @@ class QuranThemeBloc extends HydratedBloc<QuranThemeEvent, QuranThemeState> {
       }
       if (event is SetTranslationFontFamily) {
         emit(QuranThemeState(
-          showTranslation: state.showTranslation,
+          showUrduTranslation: state.showUrduTranslation,
+          showEnglishTranslation: state.showEnglishTranslation,
           translationMode: state.translationMode,
           withArabs: state.withArabs,
           quranFontSize: state.quranFontSize,
@@ -130,13 +140,14 @@ class QuranThemeBloc extends HydratedBloc<QuranThemeEvent, QuranThemeState> {
   QuranThemeState? fromJson(Map<String, dynamic> json) {
     try {
       return QuranThemeState(
-        showTranslation: json['showTranslation'] as bool,
+        showUrduTranslation: json['showUrduTranslation'] as bool,
+          showEnglishTranslation: json['showEnglishTranslation'] as bool,
         translationMode: json['translationMode'].toString(),
         withArabs: json['withArabs'] as bool,
         quranFontSize: json['quranFontSize'] as double,
         quranFontFamily: json['quranFontFamily'].toString(),
         translationFontSize: json['translationFontSize'] as double,
-        translationFontFamily: json['translationFontFamily'].toString(),
+        translationFontFamily: json['translationFontFamily'].toString(), 
       );
     } catch (e) {
       return null;
@@ -147,7 +158,7 @@ class QuranThemeBloc extends HydratedBloc<QuranThemeEvent, QuranThemeState> {
   Map<String, dynamic>? toJson(QuranThemeState state) {
     try {
       return {
-        'showTranslation': state.showTranslation,
+        'showTranslation': state.showUrduTranslation,
         'translationMode': state.translationMode,
         'withArabs': state.withArabs,
         'quranFontSize': state.quranFontSize,
