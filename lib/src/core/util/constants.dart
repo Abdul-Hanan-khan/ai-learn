@@ -6,7 +6,7 @@ const String PRAYER_TIMING_URL = 'http://api.aladhan.com/v1/timings/';
 const String DATABASE_FILE = 'siratemustaqeem-db.db';
 // const String DATABASE_URL = 'https://talhasultan.dev/assets/';
 
-const String PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.devtechnologies.siratemustaqeem';
+const String PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=ccom.qmhtech.ailearnquran';
 const WEBSITE_URL = 'https://talhasultan.dev/';
 const EMAIL_URL = 'mailto:talhasultan.dev@gmail.com?subject=Sirate%20Mustaqeem%20Query';
 const MEDIUM_URL = 'https://medium.com/@muhammadtalhasultan';

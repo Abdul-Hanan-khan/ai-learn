@@ -33,7 +33,9 @@ class DatabaseTable {
         FetchQuran(finalQurans),
       );
 
+
       List<Map<String, Object?>> surahs = await db.query('surah');
+
 
       BlocProvider.of<SurahBloc>(context).add(
         FetchSurah(surahs),

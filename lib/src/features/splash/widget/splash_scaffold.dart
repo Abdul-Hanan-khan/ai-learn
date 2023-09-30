@@ -47,15 +47,15 @@ class SplashScaffold extends StatelessWidget {
                   width: 128.w,
                 ),
               ),
-              SizedBox(
-                height: 16.h,
-              ),
-              Text(
-                'Brought to you by Dev Technologies',
-                style: GoogleFonts.kaushanScript(
-                  fontSize: 16.sp,
-                ),
-              )
+              // SizedBox(
+              //   height: 16.h,
+              // ),
+              // Text(
+              //   'Brought to you by Dev Technologies',
+              //   style: GoogleFonts.kaushanScript(
+              //     fontSize: 16.sp,
+              //   ),
+              // )
             ],
           ),
         ),
