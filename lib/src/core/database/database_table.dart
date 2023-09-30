@@ -27,8 +27,7 @@ class DatabaseTable {
         FetchDua(duas),
       );
 
-      final List<Map<String, Object?>> finalQurans =
-          await DatabaseService().splitQuranQuery(db);
+      final List<Map<String, Object?>> finalQurans = await DatabaseService().splitQuranQuery(db);
 
       BlocProvider.of<QuranBloc>(context).add(
         FetchQuran(finalQurans),

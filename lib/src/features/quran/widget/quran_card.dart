@@ -80,9 +80,22 @@ class QuranCard extends StatelessWidget {
                       SizedBox(
                         height: 8.h,
                       ),
-                      if (state.showTranslation)
+                      if (state.showUrduTranslation)
                         Text(
                           '${quran.urduTranslation}',
+                          textAlign: TextAlign.end,
+                          style:
+                              Theme.of(context).textTheme.titleLarge!.copyWith(
+                                    fontFamily: 'Jameel',
+                                    fontSize: state.translationFontSize,
+                                  ),
+                        ),
+                      SizedBox(
+                        height: 8.h,
+                      ),
+                      if (state.showEnglishTranslation)
+                        Text(
+                          '${quran.englishTranslations}',
                           textAlign: TextAlign.end,
                           style:
                               Theme.of(context).textTheme.titleLarge!.copyWith(

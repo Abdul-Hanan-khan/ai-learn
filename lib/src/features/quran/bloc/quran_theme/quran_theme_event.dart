@@ -5,12 +5,13 @@ abstract class QuranThemeEvent extends Equatable {
 }
 
 class ShowTranslation extends QuranThemeEvent {
-  final bool show;
+  final bool showUrdu;
+  final bool showEnglish;
 
-  ShowTranslation(this.show);
+  ShowTranslation(this.showUrdu,this.showEnglish);
 
   @override
-  List<Object> get props => [show];
+  List<Object> get props => [showUrdu,showEnglish];
 }
 
 class SwitchTranslationMode extends QuranThemeEvent {

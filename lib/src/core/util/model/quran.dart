@@ -2,6 +2,7 @@ class Quran {
   final int ayatId;
   final int ayatNumber;
   final String arabicText;
+  final String englishTranslations;
   final String urduTranslation;
   final int ayatSajda;
   final int surahRuku;
@@ -17,6 +18,7 @@ class Quran {
     required this.ayatId,
     required this.ayatNumber,
     required this.arabicText,
+    required this.englishTranslations,
     required this.urduTranslation,
     required this.ayatSajda,
     required this.surahRuku,
@@ -40,6 +42,7 @@ class Qurans {
           ayatId: data['ayatId'] as int,
           ayatNumber: data['ayatNumber'] as int,
           arabicText: data['arabicText'].toString(),
+          englishTranslations: data['englishTranslations'].toString(),
           urduTranslation: data['urduTranslation'].toString(),
           ayatSajda: data['ayatSajda'] as int,
           surahRuku: data['surahRuku'] as int,
