@@ -1,4 +1,4 @@
-package com.devtechnologies.siratemustaqeem
+package com.qmhtech.ailearnquran
 
 import io.flutter.embedding.android.FlutterActivity
 

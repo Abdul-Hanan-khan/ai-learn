@@ -40,7 +40,7 @@ final List<GeneralOption> generalOptions = [
     imagePath: 'assets/images/setting_icon/svg/share.svg',
     onTap: () async {
       await onShare('Hey! Checkout this app '
-          'https://play.google.com/store/apps/details?id=com.devtechnologies.siratemustaqeem');
+          'https://play.google.com/store/apps/details?id=com.qmhtech.ailearnquran');
     },
     title: 'Share with a friend',
     subtitle: 'Tell others about the app with a link.',
