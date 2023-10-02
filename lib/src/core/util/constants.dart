@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 const String PRAYER_TIMING_URL = 'http://api.aladhan.com/v1/timings/';
 
-const String DATABASE_FILE = 'siratemustaqeem-db.db';
+const String DATABASE_FILE = 'iQuranLearn-db.db';
 // const String DATABASE_URL = 'https://talhasultan.dev/assets/';
 
 const String PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=ccom.qmhtech.ailearnquran';
@@ -21,10 +21,10 @@ const Color kLightAccent = Color(0xFFe8d07f);
 // const Color kLightPrimary = Color(0xFF5AD383);
 // const Color kLightAccent = Color(0xFF48AB8C);
 const Color kLightTextColor = Colors.black;
-const Color kLightPlaceholder = Color(0xFF846C5B);
-const Color kLightPlaceholderText = Color(0xFFb8a191);
+const Color kLightPlaceholder = Color(0xFFb8a191);
+// const Color kLightPlaceholderText = Color(0xFFdbc9bd);
 // const Color kLightPlaceholder = Color(0xFFE8EAF0);
-// const Color kLightPlaceholderText = Color(0xFFC6CAD3);
+const Color kLightPlaceholderText = Color(0xFFC6CAD3);
 const Color kLightBg = Color(0xFFFFFFFF);
 const Color kLightError = Color(0xFFFF7971);
 

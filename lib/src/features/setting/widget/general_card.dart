@@ -24,7 +24,7 @@ class GeneralCard extends StatelessWidget {
             ),
           ),
           Text(
-            'Sirate Mustaqeem',
+            'I Quran Learn',
             style: Theme.of(context).textTheme.headlineSmall,
           ),
           SizedBox(
@@ -38,7 +38,7 @@ class GeneralCard extends StatelessWidget {
             height: 8.h,
           ),
           Text(
-            'Dev Technologies',
+            'Adnan Khan',
             style: Theme.of(context).textTheme.titleLarge!.copyWith(
                   fontWeight: FontWeight.bold,
                   color: Theme.of(context).primaryColor,
@@ -48,7 +48,7 @@ class GeneralCard extends StatelessWidget {
             height: 8.h,
           ),
           Text(
-            'The \'Sirate Mustaqeem\' app is a prodictivity app '
+            'The \'I Quran Learn\' app is a prodictivity app '
             'to help Muslims creating better habits '
             'and increasing their \'iman\' (faith) '
             ' and \'ibadah\' (acts of worship).',

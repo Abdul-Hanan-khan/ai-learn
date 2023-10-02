@@ -43,7 +43,7 @@ class KiblatCard extends StatelessWidget {
                   ),
                   Expanded(
                     child: Text(
-                      'Sirate Mustaqeem',
+                      'I Quran Learn',
                       style: Theme.of(context).textTheme.headlineSmall,
                     ),
                   ),

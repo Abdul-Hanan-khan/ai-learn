@@ -93,7 +93,7 @@ class MyApp extends StatelessWidget {
                   return BlocBuilder<ThemeBloc, ThemeState>(
                     builder: (context, state) {
                       return MaterialApp(
-                        title: 'Sirate Mustaqeem',
+                        title: 'I Quran Learn',
                         debugShowCheckedModeBanner: false,
                         color: Colors.white,
                         theme: state.currentTheme,
@@ -105,7 +105,7 @@ class MyApp extends StatelessWidget {
                 },
               );
             return MaterialApp(
-              title: 'Sirate Mustaqeem',
+              title: 'I Quran Learn',
               debugShowCheckedModeBanner: false,
               color: Colors.white,
               home: Container(),

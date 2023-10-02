@@ -27,7 +27,7 @@ class ThankyouScreen extends StatelessWidget {
                   child: Column(
                     children: [
                       Text(
-                        'These generous Sirate Mustaqeem contributors '
+                        'These generous I Quran Learn contributors '
                         'helped to make this app a reality!',
                         style: Theme.of(context).textTheme.titleLarge!.copyWith(
                               fontWeight: FontWeight.bold,
