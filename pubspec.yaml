@@ -59,7 +59,7 @@ flutter:
     - assets/images/quran_icon/svg/
     - assets/images/image_of_the_day/
     - assets/sound/
-    - assets/db/siratemustaqeem-db.db
+    - assets/db/iQuranLearn-db.db
 
   fonts:
     - family: Uthman

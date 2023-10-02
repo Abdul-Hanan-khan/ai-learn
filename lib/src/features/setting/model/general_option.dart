@@ -33,7 +33,7 @@ final List<GeneralOption> generalOptions = [
       await launchURL(PLAY_STORE_URL);
     },
     title: 'Rate on App Store',
-    subtitle: 'Enjoy using \'Sirate Mustaqeem\'? '
+    subtitle: 'Enjoy using \'I Quran Learn\'? '
         'Please leave a review to help other Muslims.',
   ),
   GeneralOption(
@@ -49,6 +49,6 @@ final List<GeneralOption> generalOptions = [
     imagePath: 'assets/images/setting_icon/svg/donate.svg',
     onTap: () {},
     title: 'Support this project',
-    subtitle: 'Support \'Dev Technologies\' project to benifit other Muslims.',
+    subtitle: 'Support \'I Quran Learn\' project to benifit other Muslims.',
   ),
 ];

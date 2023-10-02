@@ -74,7 +74,7 @@ class DatabaseService {
     String databasesPath = await getDatabasesPath();
     String dbPath = join(databasesPath, '$DATABASE_FILE');
 
-    ByteData data = await rootBundle.load('assets/db/siratemustaqeem-db.db');
+    ByteData data = await rootBundle.load('assets/db/iQuranLearn-db.db');
     List<int> bytes = data.buffer.asUint8List();
     await File(dbPath).writeAsBytes(bytes);
           var result = await initService(context);
